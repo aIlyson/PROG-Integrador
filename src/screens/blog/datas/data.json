@@ -1,0 +1,38 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Como combater a Dengue",
+      "author": "Cintia",
+      "content": "A prevenção da dengue é centrada na eliminação do mosquito Aedes aegypti, responsável pela transmissão da doença. Isso envolve evitar acúmulo de água em recipientes como vasos, pneus e garrafas, que podem se tornar criadouros. O uso de roupas que minimizem a exposição da pele durante o dia, quando os mosquitos estão mais ativos, é recomendado. Repelentes, inseticidas e mosquiteiros são medidas adicionais de proteção. Embora exista uma vacina contra a dengue registrada na Anvisa, disponível na rede privada, ela é recomendada apenas para pessoas que já tiveram pelo menos uma infecção por dengue, e não está disponível no SUS. O Ministério da Saúde acompanha pesquisas sobre outras vacinas.",
+      "date": "22/11/2023"
+    },
+    {
+      "id": 2,
+      "title": "Zika Vírus: O que você precisa saber",
+      "author": "Cintia",
+      "content": "O vírus Zika, descoberto em 1947, ganhou destaque devido a surtos globais, especialmente por sua transmissão pelo mosquito Aedes aegypti. Notório pelas complicações, especialmente em gestantes, o Zika está associado à microcefalia em recém-nascidos e à síndrome de Guillain-Barré. As medidas de controle incluem a prevenção de picadas, como o uso de repelentes e roupas protetoras, dada a ausência de vacina eficaz. O Zika destaca a necessidade de vigilância, pesquisa e ação coordenada para conter sua propagação e minimizar seus impactos graves.",
+      "date": "22/11/2023"
+    }
+  ],
+  "educationalVideos": [
+    {
+      "title": "Video por Cintia",
+      "duration": "01:04"
+    },
+    {
+      "title": "Video por Ângela",
+      "duration": "00:56"
+    }
+  ],
+  "aggravatedCases": {
+    "Chikungunya": {  
+      "confirmed": 84,
+      "discarded": 102
+    },
+    "Vírus Zika": {
+      "confirmed": 0,
+      "discarded": 95
+    }
+  }
+}
