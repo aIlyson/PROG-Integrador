@@ -1,7 +1,7 @@
 node_modules/**/*
 .expo/*
 eas.json
-src/db/
+src/services/
 dist/
 web-build/
 *.orig.*
@@ -21,3 +21,4 @@ yarn-error.*
 .DS_Store
 yarn.lock
 .expo-shared
+
