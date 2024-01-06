@@ -104,6 +104,9 @@ const Home = ({ navigation }) => {
               bezier
             />
           </ScrollView>
+          <View style={{...stylesp.rightIndicador,     top: '30%'}}>
+          <Icon name="chevron-right" size={24} color="#06986B" />
+        </View>
           <View style={stylesp.legendContainer}>
             <RNText style={{ ...stylesp.detailText, marginTop: 5 }}>Casos registrados em 2022 em Ouricuri</RNText>
           </View>
@@ -192,7 +195,7 @@ const Home = ({ navigation }) => {
       </Card>
 
       <Image
-        source={require('../../assets/resources/if_logo.png')}
+        source={require('../../assets/resources/if_logo.jpg')}
         style={{ ...styles.logo, height: 100, }}
         resizeMode="contain"
       />

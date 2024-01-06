@@ -63,7 +63,7 @@ const AboutLinks = ({ navigation }) => {
         </View>
 
         <Image
-          source={require('../../assets/resources/secretaria.png')}
+          source={require('../../assets/resources/secretaria.jpg')}
           style={styles.logo}
           resizeMode="contain"
         />

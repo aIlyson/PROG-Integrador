@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, ScrollView, TouchableOpacity, FlatList, Modal, Share, StyleSheet, Alert } from 'react-native';
+import { View, ScrollView, TouchableOpacity, FlatList, Modal, Share, StyleSheet, Alert, ActivityIndicator } from 'react-native';
 import { Card, ListItem, Text, SearchBar } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation } from '@react-navigation/native';
 import { PieChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import styles from '../styles';
 
 import jsonData from './datas/data.json';
@@ -28,13 +28,24 @@ const News = () => {
     setVisibleResults(newVisibleResults);
   }, [searchText, selectedCategory]);
 
+  
+  const [videoLoading, setVideoLoading] = useState(false);
+
+  const handleVideoError = async () => {
+    try {
+      setVideoLoading(true);
+
+      await new Promise(resolve => setTimeout(resolve, 3000));
+
+      Alert.alert('Video Indisponível', 'Desculpe, o vídeo não está disponível no momento. Conexão instável');
+    } finally {
+      setVideoLoading(false);
+    }
+  };
+
   const showMoreResults = () => {
     setVisibleResults(bairrosData);
     setModalVisible(true);
-  };
-
-  const handleVideoError = () => {
-    Alert.alert('Video Indisponível', 'Desculpe, o vídeo não está disponível no momento.');
   };
 
   const openModal = (caseName) => {
@@ -91,7 +102,7 @@ const News = () => {
           data={educationalVideos}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={handleVideoError}>
+            <TouchableOpacity onPress={handleVideoError} disabled={videoLoading}>
               <ListItem bottomDivider>
                 <ListItem.Content>
                   <ListItem.Title style={stylesp.listItemTitle}>{item.title}</ListItem.Title>
@@ -99,6 +110,13 @@ const News = () => {
                     Duração: {item.duration}
                   </ListItem.Subtitle>
                 </ListItem.Content>
+                {videoLoading && (
+                  <ActivityIndicator
+                    size="small"
+                    color="#257157"
+                    style={{ marginRight: 10 }}
+                  />
+                )}
               </ListItem>
             </TouchableOpacity>
           )}

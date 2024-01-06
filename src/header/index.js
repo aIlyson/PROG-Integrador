@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, StatusBar, TouchableOpacity, ImageBackground } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const StatusBarHeight = StatusBar.currentHeight;
 
@@ -19,7 +19,7 @@ export default function Header() {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require('../assets/resources/header_des.png')}
+                source={require('../assets/resources/header_des.jpg')}
                 style={styles.backgroundImage}
             >
                 <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
@@ -27,7 +27,7 @@ export default function Header() {
                 </TouchableOpacity>
                 {/* --Logo-- */}
                 <View style={styles.titleContainer}>
-                    <Image source={require('../assets/resources/logo.png')} style={styles.logoImage} />
+                    <Image source={require('../assets/resources/logo.jpg')} style={styles.logoImage} />
                 </View>
                 <TouchableOpacity onPress={handleSettingsPress} style={styles.settingsButton}>
                     <Icon name="stream" size={22} color="#FFF" />
