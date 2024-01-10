@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Linking } from "react-native";
 import { Card } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome";
-import TeamCard from "./teamcard";
+import TeamCard from "./cards";
 import { users } from "./datas/users";
 
 import styles from "../../components/styles";
@@ -14,9 +14,11 @@ const About = ({ navigation }) => {
     Linking.openURL(url);
   };
 
+
   return (
     <ScrollView style={styles.container}>
       <Header navigation={navigation} />
+      
       <Card containerStyle={styles.cardContainer}>
         <Text style={styles.cardTitle}>Sobre o App</Text>
         <Card.Divider />
@@ -110,6 +112,7 @@ const About = ({ navigation }) => {
   );
 };
 
+
 const stylesp = StyleSheet.create({
   headerSubtitle: {
     fontSize: 17,
@@ -150,3 +153,4 @@ const stylesp = StyleSheet.create({
 });
 
 export default About;
+

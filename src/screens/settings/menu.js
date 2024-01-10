@@ -59,6 +59,7 @@ const Settings = () => {
 
     return (
       <ScrollView style={styles.container}>
+        
         <View style={stylesp.headerConfig}>
           <TouchableOpacity style={stylesp.backButton} onPress={handleReturnHome}>
             <Icon name="arrow-left" size={24} color="#257157" />
@@ -121,6 +122,7 @@ const Settings = () => {
       </ScrollView>
     );
   };
+
 
   const stylesp = StyleSheet.create({
     headerConfig: {
@@ -201,3 +203,4 @@ const Settings = () => {
   });
 
   export default Settings;
+
