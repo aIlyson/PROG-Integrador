@@ -1,6 +1,5 @@
 node_modules/**/*
 .expo/*
-eas.json
 src/services/
 dist/
 web-build/

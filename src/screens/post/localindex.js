@@ -3,6 +3,7 @@ import { ScrollView, View, Text, Image, StyleSheet, Linking, Alert } from 'react
 import { Card, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import StarRating from 'react-native-star-rating';
+
 import styles from '../styles';
 
 import Header from '../../header';
@@ -80,7 +81,7 @@ const Locations = ({ navigation }) => {
                 title="Agendar Consulta"
                 onPress={() => handleScheduling(location.name)}
                 buttonStyle={styles.showMoreText}
-              // O botão encontra-se inoperante, uma vez que os estabelecimentos não dispõem desse tipo de consulta.
+              // TODO: O botão encontra-se inoperante, uma vez que os estabelecimentos não dispõem desse tipo de consulta.
               />
               <Button
                 title="Obter Direções"

@@ -3,6 +3,7 @@ import { View, Text, ScrollView, Linking } from 'react-native';
 import { Card, Button } from 'react-native-elements';
 import Header from '../../header';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+
 import styles from '../styles';
 
 const PreventAedes = ({ navigation }) => {

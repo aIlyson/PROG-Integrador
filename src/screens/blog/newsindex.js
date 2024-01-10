@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { PieChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+
 import styles from '../styles';
 
 import jsonData from './datas/data.json';
@@ -93,7 +94,7 @@ const News = () => {
         />
       </Card>
 
-      {/* dois videos eram para ser apresentados, porém react video retorna 'Cannot read property 'Constants' of null" */}
+      {/* TODO: dois videos eram para ser apresentados, porém react video retorna 'Cannot read property 'Constants' of null" */}
       <Card containerStyle={styles.cardContainer}>
         <Card.Title style={styles.cardTitle}>
           <Icon name="video" size={20} color="#257157" /> Vídeos educativos

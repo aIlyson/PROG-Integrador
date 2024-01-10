@@ -6,6 +6,7 @@ import { LineChart } from 'react-native-chart-kit';
 import Carousel from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
+
 import styles from '../styles';
 
 import Header from '../../header';
