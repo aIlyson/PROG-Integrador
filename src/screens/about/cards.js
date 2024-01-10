@@ -8,6 +8,7 @@ const TeamCard = ({ user }) => {
     Linking.openURL(instagramUrl);
   };
 
+  
   return (
     <TouchableOpacity style={styles.container} onPress={openInstagramProfile}>
       <View style={styles.memberCard}>

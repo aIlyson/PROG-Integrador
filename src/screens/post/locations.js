@@ -97,6 +97,7 @@ const Locations = ({ navigation }) => {
   );
 };
 
+
 const stylesp = StyleSheet.create({
   locationImage: {
     height: 250,
@@ -120,3 +121,4 @@ const stylesp = StyleSheet.create({
 });
 
 export default Locations;
+

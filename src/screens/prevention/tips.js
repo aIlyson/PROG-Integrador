@@ -8,9 +8,10 @@ import styles from '../../components/styles';
 import Header from '../../components/header';
 
 const Preventions = ({ navigation }) => {
-  const openLink = (url) => {
+  const handleUrl = (url) => {
     Linking.openURL(url);
   };
+
 
   return (
     <ScrollView style={styles.container}>
@@ -23,14 +24,14 @@ const Preventions = ({ navigation }) => {
           <Icon name="heartbeat" color="#18604A" size={32} />
         </View>
         <Text style={styles.cardText}>
-          Para evitar a proliferação do Aedes aegypti, é essencial eliminar água parada em objetos, manter caixas d'água tampadas, descartar lixo corretamente, usar telas em janelas, aplicar repelentes e vestir roupas adequadas.        </Text>
+          Para evitar a proliferação do <Text style={{ fontStyle: "italic" }}>Aedes</Text> aegypti, é essencial eliminar água parada em objetos, manter caixas d'água tampadas, descartar lixo corretamente, usar telas em janelas, aplicar repelentes e vestir roupas adequadas.        </Text>
         <Button
           icon={<Icon name="external-link-alt" size={15} color="#FFF" />}
           title=" Saiba mais"
           buttonStyle={styles.showMoreText}
-          onPress={() => openLink('https://www.saude.ba.gov.br/temasdesaude/arboviroses/combateaedes/#:~:text=1%20–%20Mantenha%20bem%20tampados%3A%20caixas,com%20a%20boca%20para%20baixo.')}
+          onPress={() => handleUrl('https://www.saude.ba.gov.br/temasdesaude/arboviroses/combateaedes/#:~:text=1%20–%20Mantenha%20bem%20tampados%3A%20caixas,com%20a%20boca%20para%20baixo.')}
         />
-        <Text style={{ color: '#CCC', textAlign: 'center', marginTop: 10 }}>
+        <Text style={{ color: '#CCC', textAlign: 'center', marginTop: 15 }}>
           Você será redirecionado para o site do Saúde.gov
         </Text>
       </Card>
@@ -81,3 +82,4 @@ const Preventions = ({ navigation }) => {
 };
 
 export default Preventions;
+

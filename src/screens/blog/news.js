@@ -39,7 +39,7 @@ const News = () => {
 
       await new Promise(resolve => setTimeout(resolve, 3000));
 
-      Alert.alert('Video Indisponível', 'Desculpe, o vídeo não está disponível no momento. Conexão instável');
+      Alert.alert('Video Indisponível', 'Desculpe, o vídeo não disponível no momento. Conexão instável.');
     } finally {
       setVideoLoading(false);
     }
@@ -58,13 +58,16 @@ const News = () => {
     setSelectedCase(null);
   };
 
+
   return (
     <ScrollView style={styles.container}>
       <Header navigation={navigation} />
+
       <Card containerStyle={styles.cardContainer}>
         <Card.Title style={styles.cardTitle}>
           <Icon name="newspaper" size={20} color="#257157" /> Artigos
         </Card.Title>
+        {/* TODO: VirtualizedLists */}
         <FlatList
           data={articles}
           keyExtractor={(item, index) => index.toString()}
@@ -130,7 +133,7 @@ const News = () => {
           <Icon name="chart-pie" size={20} color="#257157" /> Agravos
         </Card.Title>
         <ListItem.Subtitle style={stylesp.listItemSubtitle}>
-          Casos suspeitos das doenças transmitidas pelo Aedes Aedypti em 2022.
+          Casos suspeitos das doenças transmitidas pelo <Text style={{ fontStyle: "italic" }}>Aedes</Text> aegypti em 2022.
         </ListItem.Subtitle>
         <ScrollView horizontal showsHorizontalScrollIndicator={true}>
           <PieChart
@@ -306,6 +309,7 @@ const News = () => {
   );
 };
 
+
 const stylesp = StyleSheet.create({
   listItemTitle: {
     fontSize: 17,
@@ -395,3 +399,4 @@ const stylesp = StyleSheet.create({
 });
 
 export default News;
+
