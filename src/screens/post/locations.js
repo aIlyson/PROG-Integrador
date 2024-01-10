@@ -4,16 +4,16 @@ import { Card, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import StarRating from 'react-native-star-rating';
 
-import styles from '../styles';
+import styles from '../../components/styles';
 
-import Header from '../../header';
+import Header from '../../components/header';
 
 import locationsData from './datas/locais.json';
 import hospitalImage from '../../assets/locais/hospital_reginal_fb_ouricuri_pe.jpg';
 import ubsImage from '../../assets/locais/ubs_jose_pimentel.jpg';
 import upaeImage from '../../assets/locais/upae_ouricuri_pe.jpg';
 
-const imageMap = {
+const renderImg = {
   '../../assets/locais/hospital_reginal_fb_ouricuri_pe.jpg': hospitalImage,
   '../../assets/locais/ubs_jose_pimentel.jpg': ubsImage,
   '../../assets/locais/upae_ouricuri_pe.jpg': upaeImage,
@@ -21,26 +21,27 @@ const imageMap = {
 
 const Locations = ({ navigation }) => {
 
-  const handleScheduling = (locationName) => {
+  const handleAlert = (locationName) => {
     Alert.alert(
       'Opção Indisponível',
-      'Desculpe, a opção de agendamento não está disponível no momento.',
+      'Desculpe, a opção não disponível no momento.',
     );
   };
 
-  const handleDirections = (address) => {
+  const handleMaps = (address) => {
     const formattedAddress = address.replace(/\s/g, '+');
     const url = `https://www.google.com/maps/search/?api=1&query=${formattedAddress}`;
 
     Linking.openURL(url).catch((err) => console.error('Error opening Google Maps:', err));
   };
 
+
   return (
     <ScrollView style={styles.container}>
       <Header navigation={navigation} />
 
       {locationsData.map((location, index) => {
-        const imageSource = imageMap[location.image];
+        const imageSource = renderImg[location.image];
         return (
           <Card key={index} containerStyle={styles.cardContainer}>
             <Card.Title style={[styles.cardTitle, { color: '#111', }]}>
@@ -79,13 +80,13 @@ const Locations = ({ navigation }) => {
             <View style={stylesp.ButtonsContainer}>
               <Button
                 title="Agendar Consulta"
-                onPress={() => handleScheduling(location.name)}
+                onPress={() => handleAlert(location.name)}
                 buttonStyle={styles.showMoreText}
               // TODO: O botão encontra-se inoperante, uma vez que os estabelecimentos não dispõem desse tipo de consulta.
               />
               <Button
                 title="Obter Direções"
-                onPress={() => handleDirections(location.address)}
+                onPress={() => handleMaps(location.address)}
                 buttonStyle={styles.showMoreText}
               />
             </View>

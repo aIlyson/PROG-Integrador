@@ -21,12 +21,11 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     cardTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
+        color: '#257157',
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#257157',
         textAlign: 'left',
+        marginBottom: 10,
     },
     cardText: {
         marginBottom: 10,

@@ -8,7 +8,7 @@ const StatusBarHeight = StatusBar.currentHeight;
 export default function Header() {
     const navigation = useNavigation();
 
-    const handleHomePress = () => {
+    const handleReturnHome = () => {
         navigation.navigate('Home');
     };
 
@@ -22,7 +22,7 @@ export default function Header() {
                 source={require('../assets/resources/header_des.jpg')}
                 style={styles.backgroundImage}
             >
-                <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
+                <TouchableOpacity onPress={handleReturnHome} style={styles.homeButton}>
                     <Icon name="home" size={22} color="#FFF" />
                 </TouchableOpacity>
                 {/* --Logo-- */}

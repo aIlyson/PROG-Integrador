@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, StyleSheet, Modal, Alert, Share } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Card } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import { useNavigation } from '@react-navigation/native';
 
-import styles from '../styles';
+import styles from '../../components/styles';
 
-const SettingsScreen = () => {
+const Settings = () => {
   const navigation = useNavigation();
   const [languageModalVisible, setLanguageModalVisible] = useState(false);
+  // TODO: language sem funcionalidade
   const [selectedLanguage, setSelectedLanguage] = useState('pt'); 
 
-  const handleHomePress = () => {
+  const handleReturnHome = () => {
     navigation.navigate('Home');
   };
 
@@ -20,14 +21,14 @@ const SettingsScreen = () => {
   };
 
     const handleAboutPress = () => {
-      Alert.alert('Informações', 'Versão 0.0.3\nDesenvolvido por Alunos de Info 2021.1 IF Campus Ouricuri');
+      Alert.alert('Informações', 'Versão 0.0.4\nDesenvolvido por Alunos de Info 2021.1 IF Campus Ouricuri');
     };
 
     const handleInvite = async () => {
       try {
         const result = await Share.share({
           message: 'Venha se juntar a mim na luta contra o Aedes Aegypti!',
-          // -- colocar link do aplicativo -- //
+          // TODO: colocar link do aplicativo //
         });
 
         (result.action === Share.sharedAction && !result.activityType) ?
@@ -40,7 +41,7 @@ const SettingsScreen = () => {
       }
     };
 
-    const navigateToLanguage = () => {
+    const openModal = () => {
       setLanguageModalVisible(true);
     };
 
@@ -48,23 +49,25 @@ const SettingsScreen = () => {
       setLanguageModalVisible(false);
     };
 
+    // --> sem funcionalidade
     const changeLanguage = (language) => {
       setSelectedLanguage(language);
       i18n.changeLanguage(language);
       closeModal();
     };
 
+
     return (
       <ScrollView style={styles.container}>
         <View style={stylesp.headerConfig}>
-          <TouchableOpacity style={stylesp.backButton} onPress={handleHomePress}>
+          <TouchableOpacity style={stylesp.backButton} onPress={handleReturnHome}>
             <Icon name="arrow-left" size={24} color="#257157" />
           </TouchableOpacity>
           <Card.Title style={styles.cardTitle}>Configurações</Card.Title>
         </View>
         <Card.Divider />
 
-        <TouchableOpacity style={stylesp.cardItem} onPress={navigateToLanguage}>
+        <TouchableOpacity style={stylesp.cardItem} onPress={openModal}>
           <Text style={styles.cardText}>
             <Icon name="globe" size={21} /> Idioma
           </Text>
@@ -80,11 +83,13 @@ const SettingsScreen = () => {
           <View style={stylesp.modalContainer}>
             <View style={stylesp.modalContent}>
               <Text style={stylesp.modalTitle}>Escolha o idioma:</Text>
-              <TouchableOpacity onPress={() => changeLanguage('pt')} style={stylesp.languageButton}>
+              <TouchableOpacity style={stylesp.languageButton}>
+                {/* onPress={() => changeLanguage('pt')} */}
                 <Text style={stylesp.languageButtonText}>Português</Text>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => changeLanguage('en')} style={stylesp.languageButton}>
-                <Text style={stylesp.languageButtonText}>English</Text>
+              <TouchableOpacity style={stylesp.languageButton}>
+                {/* onPress={() => changeLanguage('en')} */}
+                <Text style={stylesp.languageButtonText}>Inglês</Text>
               </TouchableOpacity>
               <TouchableOpacity onPress={closeModal} style={stylesp.closeButton}>
                 <Text style={stylesp.closeButtonText}>Fechar</Text>
@@ -195,4 +200,4 @@ const SettingsScreen = () => {
     },
   });
 
-  export default SettingsScreen;
+  export default Settings;

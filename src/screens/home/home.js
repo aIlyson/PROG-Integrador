@@ -7,17 +7,13 @@ import Carousel from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
 
-import styles from '../styles';
+import styles from '../../components/styles';
 
-import Header from '../../header';
+import Header from '../../components/header';
 
-import { formatChartData, getHealthServices } from '../home/functions/functions';
+import { formatChartData, getHealthServices } from './functions/functions';
 
 const Home = ({ navigation }) => {
-  const handlePostPress = () => {
-    navigation.navigate('LocaisdeSaúde');
-  };
-
   const chartData = formatChartData();
   const healthServices = getHealthServices();
   const AnimatedLineChart = Animatable.createAnimatableComponent(LineChart);
@@ -58,6 +54,11 @@ const Home = ({ navigation }) => {
       updateDate: '07/12/2023',
     }
   ];
+
+  const handlePostPress = () => {
+    navigation.navigate('Locais');
+  };
+
 
   return (
     <ScrollView style={styles.container}>

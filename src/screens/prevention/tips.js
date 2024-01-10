@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, ScrollView, Linking } from 'react-native';
 import { Card, Button } from 'react-native-elements';
-import Header from '../../header';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-import styles from '../styles';
+import styles from '../../components/styles';
 
-const PreventAedes = ({ navigation }) => {
+import Header from '../../components/header';
+
+const Preventions = ({ navigation }) => {
   const openLink = (url) => {
     Linking.openURL(url);
   };
@@ -79,4 +80,4 @@ const PreventAedes = ({ navigation }) => {
   );
 };
 
-export default PreventAedes;
+export default Preventions;

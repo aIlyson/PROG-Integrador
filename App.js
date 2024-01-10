@@ -6,12 +6,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import {
-  HomeIndex,
-  NewsIndex,
-  PreventionIndex,
-  PostIndex,
-  AboutIndex,
-  SettingsScreen,
+  Home,
+  News,
+  Preventions,
+  Locations,
+  About,
+  Settings,
 } from './src/screens';
 
 const Stack = createStackNavigator();
@@ -34,14 +34,14 @@ const HomeStack = ({ navigation }) => {
     <Stack.Navigator>
       <Stack.Screen
         name="Home"
-        component={HomeIndex}
+        component={Home}
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
         name="Config"
-        component={SettingsScreen}
+        component={Settings}
         options={{
           headerShown: false,
         }}
@@ -69,7 +69,7 @@ const App = () => {
           }} />
         <BottomTab.Screen
           name="Pesquisa"
-          component={NewsIndex}
+          component={News}
           options={{
             tabBarIcon: ({ focused }) => {
               return (
@@ -83,7 +83,7 @@ const App = () => {
         />
         <BottomTab.Screen
           name="Prevenção"
-          component={PreventionIndex}
+          component={Preventions}
           options={{
             tabBarIcon: ({ focused }) => {
               return (
@@ -116,8 +116,8 @@ const App = () => {
           }}
         />
         <BottomTab.Screen
-          name="LocaisdeSaúde"
-          component={PostIndex}
+          name="Locais"
+          component={Locations}
           options={{
             tabBarIcon: ({ focused }) => {
               return (
@@ -131,7 +131,7 @@ const App = () => {
         />
         <BottomTab.Screen
           name="Sobre"
-          component={AboutIndex}
+          component={About}
           options={{
             tabBarIcon: ({ focused }) => {
               return (
@@ -146,7 +146,7 @@ const App = () => {
       </BottomTab.Navigator>
       <Stack.Screen
         name="Config"
-        component={SettingsScreen}
+        component={Settings}
         options={{
           headerShown: false,
         }}

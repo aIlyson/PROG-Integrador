@@ -6,11 +6,12 @@ import { PieChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-import styles from '../styles';
+import styles from '../../components/styles';
+
+import Header from '../../components/header';
 
 import jsonData from './datas/data.json';
 import bairrosData from './datas/bairros.json';
-import Header from '../../header';
 import { filterResults } from './functions/filter';
 
 const News = () => {
