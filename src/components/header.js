@@ -19,7 +19,7 @@ export default function Header() {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require('../assets/resources/header_des.jpg')}
+                source={require('../assets/resources/header.jpg')}
                 style={styles.backgroundImage}
             >
                 <TouchableOpacity onPress={handleReturnHome} style={styles.homeButton}>

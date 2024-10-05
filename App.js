@@ -12,7 +12,7 @@ import {
   Locations,
   About,
   Settings,
-} from './src/screens';
+} from './src/(tabs)';
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -25,7 +25,7 @@ const screenOptions = {
     left: 0,
     elevation: 0,
     height: 60,
-    background: "#FFF"
+    background: "#fff"
   }
 }
 
