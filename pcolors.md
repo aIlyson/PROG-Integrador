@@ -1,4 +1,4 @@
-<!-- color palette -->
+<!-- colors palette -->
 
 -------
 

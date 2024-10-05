@@ -19,15 +19,15 @@ export default function Header() {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require('../assets/resources/header.jpg')}
+                source={require('../assets/images/header.jpg')}
                 style={styles.backgroundImage}
             >
                 <TouchableOpacity onPress={handleReturnHome} style={styles.homeButton}>
                     <Icon name="home" size={22} color="#FFF" />
                 </TouchableOpacity>
-                {/* --Logo-- */}
+                {/* --logo-- */}
                 <View style={styles.titleContainer}>
-                    <Image source={require('../assets/resources/logo.jpg')} style={styles.logoImage} />
+                    <Image source={require('../assets/images/logo.jpg')} style={styles.logoImage} />
                 </View>
                 <TouchableOpacity onPress={handleSettingsPress} style={styles.settingsButton}>
                     <Icon name="stream" size={22} color="#FFF" />

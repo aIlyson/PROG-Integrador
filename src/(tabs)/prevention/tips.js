@@ -82,4 +82,3 @@ const Preventions = ({ navigation }) => {
 };
 
 export default Preventions;
-

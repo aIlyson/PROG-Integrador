@@ -27,9 +27,7 @@ const About = ({ navigation }) => {
           O aplicativo <Text style={{ fontStyle: "italic" }}>Aedes</Text>Info
           Ouricuri é uma ferramenta desenvolvida por alunos do Instituto
           Federal, com o propósito de combater e conscientizar a proliferação do
-          mosquito Aedes aegypti no município de Ouricuri. Este aplicativo busca
-          unir tecnologia e conscientização para criar uma comunidade mais
-          resiliente e saudável.
+          mosquito Aedes aegypti no município de Ouricuri.
         </Text>
 
         <View style={stylesp.section}>
@@ -83,7 +81,7 @@ const About = ({ navigation }) => {
         </View>
 
         <Image
-          source={require("../../assets/resources/secretaria.jpg")}
+          source={require("../../assets/images/logo_s.jpg")}
           style={styles.logo}
           resizeMode="contain"
         />
@@ -153,4 +151,3 @@ const stylesp = StyleSheet.create({
 });
 
 export default About;
-

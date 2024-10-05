@@ -1,4 +1,4 @@
-// FIXME: firebase não utilizado no projeto
+// FIXME: config firebase
 
 import { initializeApp } from "firebase/app";
 import { getDatabase} from 'firebase/database';

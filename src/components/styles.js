@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   showMoreText: {
     width: "60%",
     backgroundColor: "#257157",
-    color: "#FFF",
+    color: "#fff",
     fontSize: 16,
     textAlign: "center",
     alignSelf: "center",

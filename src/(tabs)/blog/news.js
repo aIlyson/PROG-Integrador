@@ -98,7 +98,6 @@ const News = () => {
         />
       </Card>
 
-      {/* TODO: dois videos eram para ser apresentados, porém react video retorna 'Cannot read property 'Constants' of null" */}
       <Card containerStyle={styles.cardContainer}>
         <Card.Title style={styles.cardTitle}>
           <Icon name="video" size={20} color="#257157" /> Vídeos educativos
@@ -333,7 +332,7 @@ const stylesp = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 60,
   },
-  // Modal
+  // modal styles
   modalContainer: {
     padding: 10,
     backgroundColor: '#FFF',
@@ -399,4 +398,3 @@ const stylesp = StyleSheet.create({
 });
 
 export default News;
-
