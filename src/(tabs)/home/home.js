@@ -26,21 +26,38 @@ const Home = ({ navigation }) => {
 
   const [carouselItems, setCarouselItems] = useState([
     {
+<<<<<<< HEAD:src/(tabs)/home/home.js
       title: "Enfrentando e combatendo o Aedes aegypti!",
       image: require("../../assets/locations/cathedral.jpeg"),
     },
     {
       title: "Nosso Compromisso: Defendendo a cidade contra o Aedes aegypti",
       image: require("../../assets/locations/focus.png"),
+=======
+      title: "Enfrentando e Combatendo o Aedes aegypti!",
+      image: require("../../assets/locais/catedral_pe.jpeg"),
+    },
+    {
+      title: "Nosso Compromisso: Defendendo a Cidade Contra o Aedes aegypti",
+      image: require("../../assets/locais/foco.png"),
+>>>>>>> 76caa676dc76647e6fd1efca7e0da2e17e04fd81:src/screens/home/home.js
     },
     {
       title:
         "Nossos Monumentos, Nossa Responsabilidade: Prevenção ao Aedes aegypti",
+<<<<<<< HEAD:src/(tabs)/home/home.js
       image: require("../../assets/locations/statue_image.jpeg"),
     },
     {
       title: "Ameaça Invisível, Ação Visível: A Cidade Contra o Aedes aegypti",
       image: require("../../assets/locations/combating_aedes.jpg"),
+=======
+      image: require("../../assets/locais/frei_damiao_ouricuri_pe.jpeg"),
+    },
+    {
+      title: "Ameaça Invisível, Ação Visível: A Cidade Contra o Aedes aegypti",
+      image: require("../../assets/locais/combate.jpg"),
+>>>>>>> 76caa676dc76647e6fd1efca7e0da2e17e04fd81:src/screens/home/home.js
     },
   ]);
 
